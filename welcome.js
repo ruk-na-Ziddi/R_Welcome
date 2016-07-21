@@ -20,6 +20,9 @@ ruleEngine['[object Number]'] = function(number){
 	if (isDesimal(number)) {
 		return 'hey decimal'
 	}
+	if(number == Infinity){
+		return 'get out of the world'
+	}
 	return 'hey count';
 }
 

@@ -28,3 +28,9 @@ test.welcome_responds_with_hey_dont_count_for_bad_calculation = function(){
 	assert.equal('hey dont count',r.welcome(0/'a'));
 	assert.equal('hey dont count',r.welcome('a' * 0));
 };
+
+test.welcome_responds_with_get_out_for_infinite_answers = function(){
+	var x = 0;
+	assert.equal('get out of the world',r.welcome(1/0));
+	assert.equal('get out of the world',r.welcome(12*42/x));
+};

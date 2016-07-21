@@ -23,3 +23,8 @@ test.welcome_responds_with_hey_decimal_for_decimal_numbers = function(){
 	assert.equal('hey decimal', r.welcome(0.1));
 	assert.equal('hey decimal', r.welcome(-25.01));
 };
+
+test.welcome_responds_with_hey_dont_count_for_bad_calculation = function(){
+	assert.equal('hey dont count',r.welcome(0/'a'));
+	assert.equal('hey dont count',r.welcome('a' * 0));
+};

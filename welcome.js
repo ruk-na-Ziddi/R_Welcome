@@ -3,6 +3,17 @@ exports.w = w;
 
 var decider = {};
 
-w.welcome = function(){
+var ruleEngine = {};
+
+ruleEngine['[object String]'] = function(){
 	return 'hello text';
 }
+
+ruleEngine['[object Number]'] = function(){
+	return 'hey count';
+}
+
+w.welcome = function(param){
+	return ruleEngine[toString.call(param)]();
+}
+

@@ -72,3 +72,7 @@ test.welcome_responds_with_to_be_for_boolean = function(){
 	assert.equal('to be or not to be', r.welcome(5<6));
 };
 
+test.welcome_responds_with_multiple_texts_with_two_arguments = function(){
+	assert.equal('goldy-goldy-goldy-goldy-goldy',r.welcome('goldy',5));
+	assert.equal('a-a-a-a-a-a-a',r.welcome('a',7));
+};

@@ -50,7 +50,16 @@ ruleEngine['[object Boolean]'] = function(){
 	return 'to be or not to be';
 }
 
-w.welcome = function(param){
-	return ruleEngine[toString.call(param)](param);
+var repeat = function(text, times){
+	var list_of_text = []
+	var loopCount = 0;
+	while(loopCount != times){
+		list_of_text.push(text);
+		loopCount++;
+	}
+	return list_of_text.join("-");
 }
 
+w.welcome = function(param, times){
+	return (times) ? repeat(param, times) : ruleEngine[toString.call(param)](param);
+}

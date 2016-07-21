@@ -1,0 +1,11 @@
+{
+  "name": "r_welcome",
+  "version": "1.0.0",
+  "description": "rewritting r_welcome",
+  "main": "welcome.js",
+  "scripts": {
+    "test": "node runTest.js welcomeTest.js"
+  },
+  "author": "ankurks@thoughtworks.com",
+  "license": "ISC"
+}

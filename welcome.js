@@ -26,6 +26,10 @@ ruleEngine['[object Number]'] = function(number){
 	return 'hey count';
 }
 
+ruleEngine['[object Null]'] = function(){
+	return 'oh no';
+}
+
 w.welcome = function(param){
 	return ruleEngine[toString.call(param)](param);
 }

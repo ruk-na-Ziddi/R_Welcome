@@ -34,3 +34,7 @@ test.welcome_responds_with_get_out_for_infinite_answers = function(){
 	assert.equal('get out of the world',r.welcome(1/0));
 	assert.equal('get out of the world',r.welcome(12*42/x));
 };
+
+test.welcome_responds_with_oh_no_for_null = function(){
+	assert.equal('oh no',r.welcome(null));
+};

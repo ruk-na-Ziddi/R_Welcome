@@ -30,6 +30,10 @@ ruleEngine['[object Null]'] = function(){
 	return 'oh no';
 }
 
+ruleEngine['[object Undefined]'] = function(){
+	return 'who is it';
+}
+
 w.welcome = function(param){
 	return ruleEngine[toString.call(param)](param);
 }

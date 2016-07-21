@@ -38,3 +38,8 @@ test.welcome_responds_with_get_out_for_infinite_answers = function(){
 test.welcome_responds_with_oh_no_for_null = function(){
 	assert.equal('oh no',r.welcome(null));
 };
+
+test.welcome_responds_with_who_is_it_for_undefined = function(){
+	var x;
+	assert.equal('who is it',r.welcome(x));
+};

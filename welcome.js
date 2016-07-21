@@ -42,6 +42,10 @@ ruleEngine['[object Function]'] = function(){
 	return 'call that';
 }
 
+ruleEngine['[object Array]'] = function(list){
+	return ("seeya" + " " + list.join("_")).trim();
+}
+
 w.welcome = function(param){
 	return ruleEngine[toString.call(param)](param);
 }

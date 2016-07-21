@@ -58,3 +58,10 @@ test.welcome_responds_with_call_that_for_functions = function(){
 	assert.equal('call that', r.welcome(Math.max));
 	assert.equal('call that', r.welcome(y));
 };
+
+test.welcome_responds_with_see_ya_items_for_arrays = function(){
+	assert.equal('seeya', r.welcome([]));
+	assert.equal('seeya 1_2', r.welcome([1,2]));
+	assert.equal('seeya 1_2_3', r.welcome([1,2,3]));
+	assert.equal('seeya compute_three_2_0', r.welcome(['compute','three',2,0]));
+};

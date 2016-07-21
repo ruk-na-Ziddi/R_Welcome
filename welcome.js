@@ -38,6 +38,10 @@ ruleEngine['[object Object]'] = function(obj){
 	return ('hi' + " " + Object.keys(obj).join(",")).trim();
 }
 
+ruleEngine['[object Function]'] = function(){
+	return 'call that';
+}
+
 w.welcome = function(param){
 	return ruleEngine[toString.call(param)](param);
 }

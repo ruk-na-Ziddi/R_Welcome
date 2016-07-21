@@ -49,3 +49,12 @@ test.welcome_responds_with_hi_fields_for_objects = function(){
 	assert.equal('hi one,two', r.welcome({one:1,two:2}));
 	assert.equal('hi compute,three', r.welcome({compute:function(){return 5},three:3}));
 };
+
+test.welcome_responds_with_call_that_for_functions = function(){
+	var x = function(){console.log('hmm');};
+	var y = function(z){return function(){z();}};
+	assert.equal('call that', r.welcome(function(){}));
+	assert.equal('call that', r.welcome(x));
+	assert.equal('call that', r.welcome(Math.max));
+	assert.equal('call that', r.welcome(y));
+};

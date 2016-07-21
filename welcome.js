@@ -14,15 +14,13 @@ ruleEngine['[object String]'] = function(){
 }
 
 ruleEngine['[object Number]'] = function(number){
-	if (isNaN(number)) {
+	if (isNaN(number))
 		return 'hey dont count'
-	}
-	if (isDesimal(number)) {
+	if (isDesimal(number))
 		return 'hey decimal'
-	}
-	if(number == Infinity){
+	if(number == Infinity)
 		return 'get out of the world'
-	}
+	
 	return 'hey count';
 }
 

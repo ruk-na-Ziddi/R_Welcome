@@ -16,3 +16,10 @@ test.welcome_responds_with_hey_count_for_numbers = function(){
 	assert.equal('hey count', r.welcome(0));
 	assert.equal('hey count', r.welcome(-25));
 };
+
+test.welcome_responds_with_hey_decimal_for_decimal_numbers = function(){
+	assert.equal('hey decimal', r.welcome(2.1));
+	assert.equal('hey decimal', r.welcome(420.45));
+	assert.equal('hey decimal', r.welcome(0.1));
+	assert.equal('hey decimal', r.welcome(-25.01));
+};

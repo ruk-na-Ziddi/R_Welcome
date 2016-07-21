@@ -3,6 +3,10 @@ exports.w = w;
 
 var decider = {};
 
+var isDesimal = function(param){
+	return (typeof(param) == 'number') && Math.ceil(param) != param;
+}
+
 var ruleEngine = {};
 
 ruleEngine['[object String]'] = function(){
@@ -14,6 +18,8 @@ ruleEngine['[object Number]'] = function(){
 }
 
 w.welcome = function(param){
+	if(isDesimal(param))
+		return 'hey decimal';
 	return ruleEngine[toString.call(param)]();
 }
 

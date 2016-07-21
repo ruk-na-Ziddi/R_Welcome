@@ -20,7 +20,7 @@ ruleEngine['[object Number]'] = function(number){
 		return 'hey decimal'
 	if(number == Infinity)
 		return 'get out of the world'
-	
+
 	return 'hey count';
 }
 
@@ -49,13 +49,7 @@ ruleEngine['[object Boolean]'] = function(){
 }
 
 var repeat = function(text, times){
-	var list_of_text = []
-	var loopCount = 0;
-	while(loopCount != times){
-		list_of_text.push(text);
-		loopCount++;
-	}
-	return list_of_text.join("-");
+	return --times ? text + "-" + repeat(text, times) : text;
 }
 
 w.welcome = function(param, times){

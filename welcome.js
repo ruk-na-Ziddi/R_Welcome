@@ -34,6 +34,10 @@ ruleEngine['[object Undefined]'] = function(){
 	return 'who is it';
 }
 
+ruleEngine['[object Object]'] = function(obj){
+	return ('hi' + " " + Object.keys(obj).join(",")).trim();
+}
+
 w.welcome = function(param){
 	return ruleEngine[toString.call(param)](param);
 }

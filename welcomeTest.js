@@ -43,3 +43,9 @@ test.welcome_responds_with_who_is_it_for_undefined = function(){
 	var x;
 	assert.equal('who is it',r.welcome(x));
 };
+
+test.welcome_responds_with_hi_fields_for_objects = function(){
+	assert.equal('hi', r.welcome({}));
+	assert.equal('hi one,two', r.welcome({one:1,two:2}));
+	assert.equal('hi compute,three', r.welcome({compute:function(){return 5},three:3}));
+};

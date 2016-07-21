@@ -1,8 +1,6 @@
 var w = {}
 exports.w = w;
 
-var decider = {};
-
 var isDesimal = function(number){
 	return Math.ceil(number) != number;
 }

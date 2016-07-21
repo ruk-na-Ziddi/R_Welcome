@@ -65,3 +65,10 @@ test.welcome_responds_with_see_ya_items_for_arrays = function(){
 	assert.equal('seeya 1_2_3', r.welcome([1,2,3]));
 	assert.equal('seeya compute_three_2_0', r.welcome(['compute','three',2,0]));
 };
+
+test.welcome_responds_with_to_be_for_boolean = function(){
+	assert.equal('to be or not to be', r.welcome(true));
+	assert.equal('to be or not to be', r.welcome(false));
+	assert.equal('to be or not to be', r.welcome(5<6));
+};
+

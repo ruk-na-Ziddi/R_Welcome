@@ -46,6 +46,10 @@ ruleEngine['[object Array]'] = function(list){
 	return ("seeya" + " " + list.join("_")).trim();
 }
 
+ruleEngine['[object Boolean]'] = function(){
+	return 'to be or not to be';
+}
+
 w.welcome = function(param){
 	return ruleEngine[toString.call(param)](param);
 }
